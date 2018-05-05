@@ -1,0 +1,23 @@
+<view class="intro">
+  <view class="station">{{start}} → {{terminal}}</view>
+  <view class="info">共{{stations.length}}站 · 票价{{price}}元</view>
+</view>
+<scroll-view class="detail" style="height: {{height}}px" scroll-y="{{true}}">
+  <view class="item" wx:for="{{stations}}" wx:key="{{index}}">
+    <view class="point"></view>
+    <view class="description">
+      <view class="index">-{{index + 1 > 9 ? index + 1 : '0' + (index + 1)}}-</view>
+      <view class="name">{{item}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="option">
+  <view class="reverse" bind:tap="reverseDirection">
+    <view class="icon iconfont icon-reverse"></view>
+    <view class="text">换向</view>
+  </view>
+  <view class="collect {{isCollected ? 'collected' : ''}}" bind:tap="collectLine">
+    <view class="icon iconfont icon-collection"></view>
+    <view class="text">收藏</view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "name": "bus-find",
+  "version": "1.0.0",
+  "description": "公交查询微信小程序",
+  "repository": "https://github.com/DPFlying/bus-find.git",
+  "author": "DPFlying <1419006060@qq.com>",
+  "private": true
+}

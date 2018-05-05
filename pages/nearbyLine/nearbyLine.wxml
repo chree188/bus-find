@@ -1,0 +1,37 @@
+<!-- 我的位置 -->
+<view class="my-location">
+  <view bind:tap="getMyLocation">
+    <view class="icon iconfont icon-location"></view>
+    <view class="name">{{myLocation}}</view>
+  </view>
+</view>
+<!-- 搜索框 -->
+<search-bar />
+<block wx:if="{{nearestStation}}">
+  <!-- 最近站台 -->
+  <view wx:if="{{nearestStation}}">
+    <view class="station" data-id="{{nearestStation.id}}" data-name="{{nearestStation.name}}" bind:tap="showLineList">
+      <view class="intro">
+        <view class="icon iconfont icon-station"></view>
+        <view class="name">{{nearestStation.name}}</view>
+      </view>
+      <view class="distance">{{nearestStation.distance}}米</view>
+    </view>
+    <!-- 最近站台的线路列表 -->
+    <line-list lineList="{{lineList}}" />
+  </view>
+  <!-- 其他站台 -->
+  <view class="other-station" wx:if="{{otherStation.length}}">
+    <view class="station" wx:for="{{otherStation}}" wx:key="{{index}}" data-id="{{item.id}}" data-name="{{item.name}}" bind:tap="showLineList">
+      <view class="intro">
+        <view class="icon iconfont icon-station"></view>
+        <view class="name">{{item.name}}</view>
+      </view>
+      <view class="distance">{{item.distance}}米</view>
+    </view>
+  </view>
+  <view class="refresh" bind:tap="getMyLocation">
+    <view class="iconfont icon-refresh"></view>
+  </view>
+</block>
+<view class="no-station" wx:else>你的附近没有公交线路、站台</view>

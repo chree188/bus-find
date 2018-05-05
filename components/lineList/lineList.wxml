@@ -1,0 +1,16 @@
+<view class="line-list" wx:if="{{lineList.length}}">
+  <view class="item" wx:for="{{lineList}}" wx:key="{{index}}">
+    <view class="intro" data-index="{{index}}" bind:tap="showLineDetail">
+      <view class="name">{{item.name}}</view>
+      <view class="start-terminal">
+        <view>{{item.start}}</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+        <view>{{item.terminal}}</view>
+      </view>
+    </view>
+    <view class="price" wx:if="{{showPrice}}">票价{{item.price}}元</view>
+    <view class="collected" wx:else data-index="{{index}}" bind:tap="cancleCollection">
+      <image class="start" src="/images/start.png"></image>
+    </view>
+  </view>
+</view>

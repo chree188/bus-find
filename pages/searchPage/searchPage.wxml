@@ -1,0 +1,13 @@
+<view class="search-bar">
+  <view class="input">
+    <image src="/images/search.png"></image>
+    <input type="text" placeholder="搜索公交线路、站台" focus="{{true}}" confirm-type="search" bindinput="getInputValue" bind:confirm="getSearchResult"></input>
+  </view>
+  <view class="button" bind:tap="getSearchResult">搜索</view>
+</view>
+<view class="search-result" wx:if="{{searchResult.length}}">
+  <view class="item" wx:for="{{searchResult}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="showDetail">
+    <view class="icon iconfont icon-{{item.isStation ? 'station' : 'line'}}"></view>
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>

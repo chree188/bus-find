@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "附近线路",
+  "usingComponents": {
+    "search-bar": "/components/searchBar/searchBar",
+    "line-list": "/components/lineList/lineList"
+  }
+}

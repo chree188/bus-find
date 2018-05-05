@@ -1,0 +1,20 @@
+<search-bar />
+<view class="main">
+  <view class="input-box">
+    <view class="location">
+      <view class="icon">
+        <view class="iconfont icon-circle"></view>
+        <view class="iconfont icon-circle"></view>
+      </view>
+      <view class="value">
+        <input disabled="{{true}}" placeholder="输入起点" value="{{start}}" bind:tap="getStartLocation"></input>
+        <view class="line"></view>
+        <input disabled="{{true}}" placeholder="输入终点" value="{{terminal}}" bind:tap="getTerminalLocation"></input>
+      </view>
+    </view>
+    <view class="switch iconfont icon-arrow" bind:tap="switchStartTerminal"></view>
+  </view>
+  <view class="button">
+    <view class="center" bind:tap="getLinePlan">开始规划</view>
+  </view>
+</view>

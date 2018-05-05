@@ -1,0 +1,8 @@
+<search-bar />
+<block wx:if="{{collectedList.length}}">
+  <line-list lineList="{{collectedList}}" showPrice="{{false}}" bind:canclecollection="cancleCollection" />
+  <view class="clear" bind:tap="clearCollected">
+    <view class="text">清空收藏内容</view>
+  </view>
+</block>
+<view class="no-collected" wx:else>还没有任何收藏内容哦</view>

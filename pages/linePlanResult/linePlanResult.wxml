@@ -1,0 +1,13 @@
+<view wx:if="{{linePlans.length}}">
+  <view class="item" wx:for="{{linePlans}}" wx:key="{{index}}" data-index="{{index}}" bind:tap="showDetail">
+    <view class="content">
+      <view class="transit">{{item.transitionLine}}</view>
+      <view class="intro">
+        {{item.duration}} • {{item.distance}} •
+        <view class="walk-icon iconfont icon-walk"></view>
+        {{item.walkDistance}} • {{item.cost}}元
+      </view>
+    </view>
+    <view class="enter-icon iconfont icon-enter"></view>
+  </view>
+</view>

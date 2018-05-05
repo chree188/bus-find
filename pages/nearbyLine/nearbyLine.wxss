@@ -1,0 +1,87 @@
+page {
+  margin-bottom: 60px;
+}
+
+.my-location {
+  background-color: #0082dc;
+}
+
+.my-location > view {
+  display: inline-flex;
+  align-items: baseline;
+  padding: 5px 35rpx 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.my-location .icon {
+  margin-right: 4px;
+}
+
+.my-location .name {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.station {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 35rpx;
+  background-color: #fbfbfd;
+}
+
+.station .intro {
+  display: flex;
+  align-items: center;
+}
+
+.station .icon {
+  margin-right: 8px;
+  font-size: 24px;
+  color: #0082dc;
+}
+
+.station .name {
+  font-size: 14px;
+  color: #666;
+}
+
+.station .distance {
+  font-size: 12px;
+  color: #0082dc;
+}
+
+.other-station {
+  margin-top: 10px;
+}
+
+.other-station .station {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.other-station .station:last-child {
+  border-bottom: none;
+}
+
+.refresh {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #0082dc;
+  border-radius: 50%;
+}
+
+.no-station {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: #aaa;
+}

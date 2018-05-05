@@ -1,0 +1,6 @@
+<view class="search-bar">
+  <view class="wrapper" bind:tap="openSearchPage">
+    <image src="/images/search.png"></image>
+    <view class="text">搜索公交线路、站台</view>
+  </view>
+</view>

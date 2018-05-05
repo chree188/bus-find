@@ -1,0 +1,108 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 35rpx;
+  height: 36px;
+  background-color: #fbfbfd;
+}
+
+.station {
+  font-size: 12px;
+  color: #333;
+}
+
+.info {
+  font-size: 10px;
+  color: #666;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 8px auto;
+  padding: 8px;
+  width: 680rpx;
+  background-color: #fbfbfd;
+  border-radius: 4px;
+}
+
+.item {
+  position: relative;
+  padding: 26px 1px;
+  width: 8px;
+  background-color: #0082dc;
+}
+
+.item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.point {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.index {
+  width: 40px;
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+}
+
+.name {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.option {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  color: #aaa;
+  background-color: #fff;
+}
+
+.reverse,
+.collect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0 4px;
+  width: 50px;
+}
+
+.collected {
+  color: #0082dc;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.text {
+  font-size: 10px;
+}

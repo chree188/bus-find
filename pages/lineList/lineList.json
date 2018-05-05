@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "line-list": "/components/lineList/lineList"
+  }
+}

@@ -1,0 +1,30 @@
+<view wx:if="{{detailTransition.length > 0}}">
+  <view class="item {{item.isBus ? 'bus' : 'walk'}}" wx:for="{{detailTransition}}" wx:key="{{index}}">
+    <view class="icon iconfont icon-{{item.isBus ? 'bus' : 'walk'}}"></view>
+    <view class="split-line">
+      <view class="circle start-circle" wx:if="{{index === 0 || item.isBus}}"></view>
+      <view class="circle terminal-circle" wx:if="{{index === detailTransition.length - 1 || item.isBus}}"></view>
+    </view>
+    <view class="detail">
+      <view class="start" wx:if="{{index === 0}}">{{start}}</view>
+      <view class="content">
+        <block wx:if="{{item.isBus}}">
+          <view>
+            <view class="station">{{item.getonStation}}</view>
+            上车
+          </view>
+          <view>{{item.lineName}}</view>
+          <view>下一站 • {{item.nextStation}}</view>
+          <view>
+            <view class="station">{{item.getoffStation}}</view>
+            下车
+          </view>
+        </block>
+        <block wx:else>
+          <view>步行{{item.segmentWalkDistance}}</view>
+        </block>
+      </view>
+      <view class="terminal" wx:if="{{index === detailTransition.length - 1}}">{{terminal}}</view>
+    </view>
+  </view>
+</view>

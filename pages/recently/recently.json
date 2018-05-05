@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "最近使用",
+  "usingComponents": {
+    "search-bar": "/components/searchBar/searchBar"
+  }
+}

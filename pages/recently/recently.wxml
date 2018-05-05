@@ -1,0 +1,16 @@
+<search-bar />
+<block wx:if="{{recentlyList.length}}">
+  <view class="recently">
+    <view class="item" wx:for="{{recentlyList}}" wx:key="{{index}}">
+      <view class="content" data-index="{{index}}" bind:tap="showDetail">
+        <view class="content-icon iconfont icon-{{item.isStation ? 'station' : 'line'}}"></view>
+        <view class="content-name">{{item.name}}</view>
+      </view>
+      <view class="delete" data-index="{{index}}" bind:tap="deleteItem">
+        <view class="delete-icon iconfont icon-delete"></view>
+      </view>
+    </view>
+  </view>
+  <view class="clear" bind:tap="clearRecently">清空使用记录</view>
+</block>
+<view class="no-recently" wx:else>还没有任何使用记录哦</view>
